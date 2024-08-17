@@ -69,7 +69,7 @@ for name, model in models.items():
     print(f"{name} MSE: {mean_squared_error(y_test, y_pred)} R2: {r2_score(y_test, y_pred)}")
 ```
 
-##Prediction Function
+## Prediction Function
 A function to make predictions using the Decision Tree model.
 ```python
 def prediction(Year, average_rain_fall_mm_per_year, pesticides_tonnes, avg_temp, Area, Item):
@@ -77,7 +77,7 @@ def prediction(Year, average_rain_fall_mm_per_year, pesticides_tonnes, avg_temp,
     transformed_features = preprocessor.transform(features)
     return dtr.predict(transformed_features)
 ```
-##Saving Models and Preprocessors
+## Saving Models and Preprocessors
 The trained Decision Tree model and the preprocessor are saved using pickle for future use.
 ```python
 import pickle
@@ -88,7 +88,7 @@ with open('dtr.pkl', 'wb') as f:
 with open('preprocessor.pkl', 'wb') as f:
     pickle.dump(preprocessor, f)
 ```
-##Environment Setup
+## Environment Setup
 Print versions of key libraries to ensure compatibility.
 ```python
 import sklearn
@@ -96,5 +96,5 @@ print(sklearn.__version__)
 import numpy
 print(numpy.__version__)
 ```
-##Conclusion
+## Conclusion
 This script effectively handles data loading, cleaning, visualization, model training, and prediction for crop yield based on provided data. It utilizes several advanced machine learning techniques and data processing steps to ensure accurate predictions.
